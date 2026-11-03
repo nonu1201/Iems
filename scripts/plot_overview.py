@@ -9,7 +9,9 @@ import numpy as np
 
 from build_eq import BLUE, GRID, INK, INK2, MUTED, ORANGE, AQUA, ROOT, SURFACE, log_axis
 
-CHOSEN = {'IEF Preference 2025 (711)': AQUA, 'Harman IE 2019v2': ORANGE, 'IEM: Thieaudio Monarch MK3': BLUE}
+# first set (blue) and the non-Harman second set (orange)
+CHOSEN = {'IEF Preference 2025 (711)': BLUE, 'Harman IE 2019v2': BLUE, 'IEM: Thieaudio Monarch MK3': BLUE,
+          'Δ JM-1 −10dB tilt (711)': ORANGE, 'HBB Bad Guy 2022': ORANGE, 'IEM: Truthear Hexa': ORANGE}
 
 
 def consensus_plot():
@@ -77,8 +79,8 @@ def ranking_plot():
                   color=INK2, fontsize=9)
     ax.set_title('How far each 711 target is from a stock Cadenza 2', loc='left', fontsize=13, color=INK,
                  fontweight='bold', pad=22)
-    ax.text(0, 1.008, 'Shorter = less EQ. Colored bars = the three picks. "(IEM)" = another IEM\'s tuning, '
-            'built from same-site measurements.', transform=ax.transAxes, fontsize=9, color=INK2, va='bottom')
+    ax.text(0, 1.008, 'Shorter = less EQ. Blue = first set of picks, orange = non-Harman set. "(IEM)" = another IEM\'s '
+            'tuning, built from same-site measurements.', transform=ax.transAxes, fontsize=9, color=INK2, va='bottom')
     fig.tight_layout()
     fig.savefig(os.path.join(ROOT, 'plots', '01 Target EQ-effort ranking.png'), dpi=200, facecolor=SURFACE)
     plt.close(fig)

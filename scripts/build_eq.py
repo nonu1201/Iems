@@ -40,6 +40,13 @@ TARGETS = [
     dict(name='Thieaudio Monarch MK3', csv='IEM Thieaudio Monarch MK3.csv',
          label='Thieaudio Monarch MK3 (711, rig-matched)',
          source='median of same-site (Monarch MK3 - Cadenza 2) deltas from 8 squig.link 711 databases'),
+    # Non-Harman set (second request)
+    dict(name='Delta JM-1 -10dB Tilt', csv='Delta JM-1 -10dB tilt (711).csv',
+         label='Δ JM-1 −10 dB tilt (711)', source="Super* Review's 711 Δ JM-1 -10 dB tilt, as hosted on squig.link"),
+    dict(name='HBB Bad Guy 2022', csv='HBB Bad Guy 2022.csv',
+         label='HBB Bad Guy 2022', source="Hawaii Bad Boy's house target, as hosted on hbb.squig.link"),
+    dict(name='Truthear Hexa', csv='IEM Truthear Hexa.csv', label='Truthear Hexa (711, rig-matched)',
+         source='median of same-site (Hexa - Cadenza 2) deltas from 18 squig.link 711 databases'),
 ]
 
 PEQ_CONFIG = {
@@ -153,7 +160,7 @@ def plot_target(t, fr, eq, gfx_points, peq_curve, preamp, peq_preamp, peqs, out)
     ax2.set_xlabel('Frequency (Hz)', color=INK2, fontsize=10)
     lo2 = min(np.min(eq + preamp), np.min(peq_curve + peq_preamp))
     ax2.set_ylim(math.floor(lo2 - 1), 1.5)
-    ax2.legend(loc='lower left', frameon=False, fontsize=9, labelcolor=INK)
+    ax2.legend(loc='best', frameon=False, fontsize=9, labelcolor=INK)
     fig.tight_layout()
     fig.savefig(out, dpi=200, facecolor=SURFACE)
     plt.close(fig)

@@ -8,8 +8,12 @@ Data collected from squig.link on 2026-11-03. EQs generated with **AutoEq 4.1.2*
 | **Thieaudio Monarch MK3** (IEM tuning) | [`wavelet/Thieaudio Monarch MK3.txt`](wavelet/Thieaudio%20Monarch%20MK3.txt) | [csv](peq/Thieaudio%20Monarch%20MK3.csv) · [APO](peq/Thieaudio%20Monarch%20MK3%20ParametricEQ.txt) | [png](plots/Thieaudio%20Monarch%20MK3.png) | +1.9 / −1.1 dB | −2.5 dB |
 | **IEF Preference 2025** (711) | [`wavelet/IEF Preference 2025.txt`](wavelet/IEF%20Preference%202025.txt) | [csv](peq/IEF%20Preference%202025.csv) · [APO](peq/IEF%20Preference%202025%20ParametricEQ.txt) | [png](plots/IEF%20Preference%202025.png) | +1.6 / −2.1 dB | −2.1 dB |
 | **Harman IE 2019v2** | [`wavelet/Harman IE 2019v2.txt`](wavelet/Harman%20IE%202019v2.txt) | [csv](peq/Harman%20IE%202019v2.csv) · [APO](peq/Harman%20IE%202019v2%20ParametricEQ.txt) | [png](plots/Harman%20IE%202019v2.png) | +3.0 / −2.1 dB | −3.5 dB |
+| ***Non-Harman set*** | | | | | |
+| **HBB Bad Guy 2022** (reviewer target) | [`wavelet/HBB Bad Guy 2022.txt`](wavelet/HBB%20Bad%20Guy%202022.txt) | [csv](peq/HBB%20Bad%20Guy%202022.csv) · [APO](peq/HBB%20Bad%20Guy%202022%20ParametricEQ.txt) | [png](plots/HBB%20Bad%20Guy%202022.png) | +1.9 / −2.4 dB | −2.5 dB |
+| **Δ JM-1 −10 dB tilt** (711) | [`wavelet/Delta JM-1 -10dB Tilt.txt`](wavelet/Delta%20JM-1%20-10dB%20Tilt.txt) | [csv](peq/Delta%20JM-1%20-10dB%20Tilt.csv) · [APO](peq/Delta%20JM-1%20-10dB%20Tilt%20ParametricEQ.txt) | [png](plots/Delta%20JM-1%20-10dB%20Tilt.png) | +1.6 / −3.6 dB | −2.1 dB |
+| **Truthear Hexa** (IEM tuning) | [`wavelet/Truthear Hexa.txt`](wavelet/Truthear%20Hexa.txt) | [csv](peq/Truthear%20Hexa.csv) · [APO](peq/Truthear%20Hexa%20ParametricEQ.txt) | [png](plots/Truthear%20Hexa.png) | +1.9 / −2.3 dB | −2.4 dB |
 
-**Try first:** Monarch MK3 (reasons in [§6](#6-comparison-and-which-to-try-first)).
+**Try first:** if you're not a Harman fan, start with **HBB Bad Guy 2022**. If you're fine with Harman-ish treble, start with Monarch MK3. Reasons are in [§6](#6-comparison-and-which-to-try-first).
 
 ---
 
@@ -118,7 +122,7 @@ Full numbers are in [`data/target_ranking.csv`](data/target_ranking.csv), includ
 
 **Why most targets are a poor fit for this IEM:** a large share of them want the Cadenza 2's 10 kHz dip filled and more air added above it. That's the region you asked me not to boost. It's also where 711 measurements are least reliable and where a single dynamic driver like this one is already rolling off. So "least EQ" and "suits the driver" both point to targets that are already happy with its top end and its sub-bass shelf.
 
-### The three picks
+### The three picks (first set)
 
 1. **IEF Preference 2025 (711): the least-change modern target.** It needs 0.91 dB RMS of correction, with no boost over +1.5 dB and **essentially no air above 10 kHz (0.09 dB)**. Its bass matches the Cadenza 2's KARS shelf within 0.2 dB, so the driver's strongest feature is left alone. The main move is a **1.5–2 dB cut at 5–8 kHz**; cuts are the safest EQ on a single dynamic driver. It also adds about +1.5 dB at 3 kHz and about +1 dB at 500–600 Hz.
    *Version caveat:* Crinacle's own 711 file sits behind his encrypted graph tool, so I used the most widely shared copy, which is identical on three sites (ATechReviews, Fahryst, OB Odio). The PEQdB paper says Crinacle made his 711 version by measuring a 5128-compliant IEM on a 711 clone. That would explain why the copy doesn't exactly equal his published shelves applied to Listener's Δ JM-1: that recipe version is 1.5–3 dB brighter at 6–9 kHz; that version is in [`data/targets/IEF Preference 2025 (711 recipe).csv`](data/targets/IEF%20Preference%202025%20(711%20recipe).csv). Below 5 kHz the two agree within about 1 dB.
@@ -131,6 +135,53 @@ Full numbers are in [`data/target_ranking.csv`](data/target_ranking.csv), includ
 * Truthear Gate (0.66) is a $20 single dynamic driver that's already a near-twin of the Cadenza 2, so it changes very little.
 * Banbeucmas (0.70) is a 2021 reviewer target that's essentially Harman with less ear gain, so it overlaps the Harman pick.
 * **Truthear Zero:Red (0.86) is the best runner-up.** It's dual-DD, neutral with bass, with slightly less sub-bass and more 7–9 kHz. Its target CSV is in `data/targets/`; add it to `TARGETS` in `scripts/build_eq.py` to generate it.
+
+### The non-Harman set (second request)
+
+**Rules:**
+* No Harman target: neither IE 2019v2 nor MoA 2025.
+* Nothing that is Harman-based or measures like Harman. That rules out USound1V1, which is built on Harman, and Banbeucmas, which sits within 1 dB RMS of Harman.
+* The EQ'd Cadenza 2 must end up **further from Harman than the stock Cadenza 2 already is**. The stock unit is 1.49 dB RMS from Harman IE 2019v2 (20 Hz–10 kHz, mean-aligned).
+
+Within those rules: small EQ, suits the single dynamic driver, and three clearly different flavors that don't repeat IEF Preference 2025.
+
+Every remaining candidate went through the same constrained AutoEq run:
+
+| Candidate | EQ range (dB) | Error after EQ | Distance from Harman after EQ | Character of the change |
+|---|---|---|---|---|
+| **HBB Bad Guy 2022** | +1.9 / −2.4 | 0.86 | **2.03** | more mid-bass, **less 1–5 kHz**, a little 7–9 kHz sparkle |
+| **Δ JM-1 −10 dB tilt** | +1.6 / −3.6 | 0.58 | **2.51** | **−3 dB sub-bass**, fuller 200–500 Hz, smoother 5–6 kHz |
+| **Truthear Hexa** (IEM, 18 sites) | +1.9 / −2.3 | 0.71 | **1.77** | same sub-bass, less 2 kHz and 4–5 kHz glare, more 7–8 kHz |
+| Simgot EW300 (IEM) | +1.8 / −2.2 | 0.45 | 1.88 | warmer: +1.8 dB at 150 Hz, −1.9 dB at 6 kHz (overlaps HBB / IEF) |
+| Dunu Kima 2 (IEM, single DD) | +2.0 / −4.5 | 0.28 | 2.44 | same direction as JM-1 but a deeper −4.5 dB cut |
+| Kiwi Ears Orchestra Lite (IEM) | +1.1 / −3.3 | 0.54 | 2.26 | darker and more relaxed: −1.7 to −2.3 dB at 3–6 kHz, less sub-bass |
+| Moondrop Kato (IEM) | +1.7 / −2.7 | 0.53 | 1.88 | less sub-bass, a little more 7–8 kHz |
+| Moondrop Aria 2 (IEM) | +1.9 / −3.6 | 0.54 | 2.08 | less sub-bass, otherwise small |
+| 7Hz Timeless (IEM) | +2.0 / −2.8 | 0.60 | 2.03 | −2 to −2.7 dB at 3–4 kHz |
+| Δ SoundGuys | +1.7 / −2.6 | 0.96 | 2.07 | fuller lower mids; wants +3.5 dB of air above 10 kHz |
+| Precogvision | +2.4 / −4.3 | 0.68 | 2.57 | a big −4.3 dB cut at 3 kHz (too drastic) |
+| Timmy, Antdroid | +2.8 / −1.9, +1.4 / −2.2 | 0.72, 0.76 | 1.55, 1.72 | barely away from Harman (Timmy) / older target (Antdroid) |
+
+For reference: IEF Preference 2025 lands at 2.09 from Harman after EQ (it moves away). **Monarch MK3 lands at 1.22, which is slightly *closer* to Harman than stock**, mostly because of its 5–8 kHz lift.
+
+**Why these three:**
+1. **HBB Bad Guy 2022: the most direct opposite of Harman's upper mids.** It's Hawaii Bad Boy's own house target. I couldn't find documentation of how it was built, so the "not Harman" claim rests on the measurement: the EQ'd result is 2.03 from Harman.
+   * On the Cadenza 2 it takes **1–2.2 dB out of 1–5 kHz**, where Harman's "shouty" ear gain lives. It adds +1 to +1.9 dB of mid-bass punch at 50–200 Hz and keeps the sub-bass.
+   * A small +1 to +1.5 dB at 7–9 kHz keeps it from sounding dull.
+   * Its error after EQ (0.86) is the highest of the set only because it also wants up to +6 dB at 9–10 kHz, which the no-boost rule removes. Below 9 kHz it tracks the target closely.
+2. **Δ JM-1 −10 dB tilt (711): the modern diffuse-field approach.** It's a JM-1 population-average HRTF with a −1 dB/oct tilt, Super* Review's current default, and the base of Crinacle's IEF 2025. It's the **farthest from Harman** of the set (2.51).
+   * On the Cadenza 2 it is mainly a **−3 dB sub-bass cut** plus about +1 dB at 200–500 Hz: more natural, fuller mids and less boom. It also trims 5–6 kHz by about 2 dB.
+   * It's mostly cuts (largest boost only +1.6 dB). Trade-off: you lose some of the KARS sub-bass slam, and 3 kHz gets relatively a bit more forward (+1.6 dB).
+3. **Truthear Hexa (IEM tuning): the neutral benchmark.** It's built from 18 sites that measured both IEMs, the most robust IEM target here, and was the most-selected IEM in PEQdB's listening test.
+   * The Cadenza 2 keeps its sub-bass and loses some upper-mid glare (−1.8 dB at 2 kHz, −2.1 dB at 5 kHz), with +1.6–1.7 dB of sparkle at 7–8 kHz.
+   * The treble limits mean you get a gentle share of Hexa's 7–9 kHz peak, not the full +4 dB.
+
+**Runners-up**, if one of these three misses:
+* Simgot EW300: warm, the lowest effort.
+* Dunu Kima 2: another single dynamic driver, the closest match after EQ (0.28 dB), in the same direction as JM-1.
+* Kiwi Ears Orchestra Lite: the darkest and most relaxed option.
+
+All three target CSVs are in `data/targets/`.
 
 ---
 
@@ -212,6 +263,60 @@ Filters 2 and 3 are AutoEq's fit as-is; together they act as one −1.4 dB dip a
 
 ![Thieaudio Monarch MK3](plots/Thieaudio%20Monarch%20MK3.png)
 
+### HBB Bad Guy 2022 (non-Harman set)
+
+File: [`wavelet/HBB Bad Guy 2022.txt`](wavelet/HBB%20Bad%20Guy%202022.txt). Error vs target: **1.44 → 0.86 dB RMS**.
+
+| # | Type | Freq (Hz) | Gain (dB) | Q |
+|---|---|---|---|---|
+| – | **Preamp** | | **−2.5** | |
+| 1 | Low shelf | 105 | +0.8 | 0.70 |
+| 2 | Peak | 174 | +2.0 | 0.96 |
+| 3 | Peak | 331 | −1.6 | 1.98 |
+| 4 | Peak | 709 | +0.7 | 1.77 |
+| 5 | Peak | 1308 | −1.3 | 1.00 |
+| 6 | Peak | 4907 | −3.4 | 1.50 |
+| 7 | Peak | 6790 | +2.8 | 1.50 |
+| 8 | High shelf | 10000 | −1.0 | 0.70 |
+
+![HBB Bad Guy 2022](plots/HBB%20Bad%20Guy%202022.png)
+
+### Δ JM-1 −10 dB tilt (711) (non-Harman set)
+
+File: [`wavelet/Delta JM-1 -10dB Tilt.txt`](wavelet/Delta%20JM-1%20-10dB%20Tilt.txt). Error vs target: **1.87 → 0.58 dB RMS**.
+
+| # | Type | Freq (Hz) | Gain (dB) | Q |
+|---|---|---|---|---|
+| – | **Preamp** | | **−2.3** | |
+| 1 | Peak | 44 | −1.3 | 0.70 |
+| 2 | Low shelf | 105 | −2.8 | 0.70 |
+| 3 | Peak | 252 | +1.5 | 0.22 |
+| 4 | Peak | 1457 | −2.6 | 1.02 |
+| 5 | Peak | 3040 | +2.9 | 2.22 |
+| 6 | Peak | 5156 | −2.8 | 1.50 |
+| 7 | Peak | 6581 | +0.7 | 1.50 |
+| 8 | High shelf | 10000 | −0.4 | 0.70 |
+
+![Δ JM-1 −10 dB tilt](plots/Delta%20JM-1%20-10dB%20Tilt.png)
+
+### Truthear Hexa (711, same-rig) (non-Harman set)
+
+File: [`wavelet/Truthear Hexa.txt`](wavelet/Truthear%20Hexa.txt). Error vs target: **1.29 → 0.71 dB RMS**.
+
+| # | Type | Freq (Hz) | Gain (dB) | Q |
+|---|---|---|---|---|
+| – | **Preamp** | | **−1.9** | |
+| 1 | Peak | 51 | −2.7 | 0.67 |
+| 2 | Low shelf | 105 | +1.7 | 0.70 |
+| 3 | Peak | 191 | +1.4 | 2.07 |
+| 4 | Peak | 2030 | −1.9 | 1.38 |
+| 5 | Peak | 3224 | +2.9 | 2.86 |
+| 6 | Peak | 4887 | −3.6 | 1.36 |
+| 7 | Peak | 7170 | +3.0 | 1.50 |
+| 8 | High shelf | 10000 | −1.3 | 0.70 |
+
+![Truthear Hexa](plots/Truthear%20Hexa.png)
+
 The `peq/* ParametricEQ.txt` files hold the same filters in EqualizerAPO format, for apps that import PEQ.
 
 ---
@@ -229,15 +334,47 @@ The `peq/* ParametricEQ.txt` files hold the same filters in EqualizerAPO format,
 | Lower treble 6–8 kHz | −1.7 to −0.5 | **+3.0 to +1.3** | **+1.6 to +1.8** |
 | ≥10 kHz | cuts only (−1.6 to 0) | 0 to −1.0 | 0 |
 
+Non-Harman set:
+
+| Region | HBB Bad Guy 2022 | Δ JM-1 −10 dB tilt | Truthear Hexa |
+|---|---|---|---|
+| Sub-bass 20–50 Hz | +0.3 to +1.0 | **−2.9 to −3.2** | +1.2 to −1.0 |
+| Mid-bass 100–200 Hz | **+1.1 to +1.6** | −0.9 to +1.4 | −0.4 to +1.0 |
+| Lower mids 300–500 Hz | −0.4 to 0 | +0.8 to +1.1 | +0.1 to −0.1 |
+| 1–2 kHz | −0.8 to −0.9 | −1.0 to −1.3 | −0.4 to **−1.8** |
+| Ear gain 3 kHz | **−1.0** | +1.6 | +0.7 |
+| Presence 4–5 kHz | **−1.9 to −2.2** | −0.7 to −2.1 | −1.3 to **−2.1** |
+| Lower treble 6–9 kHz | 0 to +1.5 | −1.7 to −0.2 | −0.7 to **+1.7** |
+| ≥10 kHz | 0 | cuts only (−1.0 to 0) | 0 |
+
 ## 6. Comparison and which to try first
+
+### Non-Harman set
+
+| | **HBB Bad Guy 2022** | **Δ JM-1 −10 dB tilt** | **Truthear Hexa** |
+|---|---|---|---|
+| Size of change | small (+1.9 / −2.4 dB) | small boosts, one bigger cut (+1.6 / −3.6 dB) | small (+1.9 / −2.3 dB) |
+| Distance from Harman (stock = 1.49) | 2.03 | **2.51** (farthest) | 1.77 |
+| Sound vs stock | Warmer and punchier; vocals and guitars sit back a little, so it's never shouty; a touch of treble sparkle keeps it clear. The "fun but relaxed" option. | Less sub-bass rumble, fuller and more natural lower mids, smoother lower treble. Sounds more like speakers in a room and less like an IEM with a bass shelf. | Keeps the sub-bass, cleans up upper-mid glare at 2 and 5 kHz, adds crisp sparkle at 7–8 kHz. Neutral, tidy and the most "detailed" of the three. |
+| Suits | People who find Harman shouty or fatiguing; rock, pop, hip-hop at moderate volume | People who find Harman's bass shelf boomy or its mids thin; acoustic, jazz, classical, vocals | Neutral/reference fans who want clarity without Harman's 3 kHz push |
+
+**Not a Harman fan: try HBB Bad Guy 2022 first.** It addresses two common complaints about Harman, the upper-mid push and lean lower mids, with small changes, and it keeps the Cadenza 2's bass. Then:
+* **want less bass and more natural mids** → **Δ JM-1 −10 dB tilt**;
+* **want it cleaner and crisper** → **Truthear Hexa**;
+* **want the stock bass with only smoother treble** → **IEF Preference 2025**, from the first set.
+
+One thing to know about the first set: **Monarch MK3 moves the Cadenza 2 slightly toward Harman** (1.22 vs 1.49 stock) because of its 5–8 kHz lift, so skip it if Harman's treble is what bothers you.
+
+### First set
 
 | | **Monarch MK3** | **IEF Preference 2025** | **Harman IE 2019v2** |
 |---|---|---|---|
 | Size of change | smallest (+1.9 / −1.1 dB) | small (+1.6 / −2.1 dB) | moderate (+3.0 / −2.1 dB) |
+| Distance from Harman (stock = 1.49) | 1.22 (slightly toward Harman) | 2.09 | 0.67 (it is Harman) |
 | Sound vs stock | Same bass, slightly cleaner lower mids, a touch less 3 kHz push, more 5–8 kHz sparkle. More open and "detailed" without getting shouty. | Same punchy sub-bass, a bit more body in the lower mids, vocals slightly more forward at 3 kHz, smoother and less sibilant at 5–8 kHz. The warmest and most relaxed of the three. | Same sub-bass, leaner lower mids, clearly more 3–7 kHz energy: crisper vocals, guitars and cymbals. The brightest and most "clear", with the most risk of sibilance on hot recordings. |
 | Suits | All-rounders who want a bit more clarity and air without changing the Cadenza 2's character | Treble-sensitive listeners, long sessions, loud listening, warm/smooth lovers | People who find the stock Cadenza 2 a little warm, veiled or polite; reference/Harman fans; pop, rock, EDM |
 
-**Try Monarch MK3 first.** It's the smallest change of the three. It keeps the Cadenza 2's bass exactly as it is, and it adds the kind of 5–8 kHz sparkle that a single dynamic driver handles comfortably at +2 dB. Then:
+**Try Monarch MK3 first** (if Harman isn't a concern). It's the smallest change of the three. It keeps the Cadenza 2's bass exactly as it is, and it adds the kind of 5–8 kHz sparkle that a single dynamic driver handles comfortably at +2 dB. Then:
 * **too bright or sibilant** → switch to **IEF Preference 2025**;
 * **vocals still feel a bit distant or the sound a bit warm** → try **Harman IE 2019v2**.
 
