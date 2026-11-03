@@ -15,6 +15,35 @@ Data collected from squig.link on 2026-11-03. EQs generated with **AutoEq 4.1.2*
 
 **Try first:** if you're not a Harman fan, start with **HBB Bad Guy 2022**. If you're fine with Harman-ish treble, start with Monarch MK3. Reasons are in [§6](#6-comparison-and-which-to-try-first).
 
+### Genre guide and download
+
+**Download:** [`dist/Cadenza 2 Wavelet EQ.zip`](dist/Cadenza%202%20Wavelet%20EQ.zip). Inside:
+* `By genre/<genre>/` holds all six presets ranked for that genre, e.g. `Pop 1 - HBB Bad Guy 2022.txt`.
+* `All presets/` holds each file once, named by what it's for.
+* `PEQ (other apps)/`, `Plots/`, and a plain-text guide.
+
+The zip is rebuilt by `scripts/make_zip.py`.
+
+| Genre | Ranking (best → worst) |
+|---|---|
+| Pop | HBB > IEF > Hexa > Harman > MK3 > JM-1 |
+| Hip-hop / rap / trap | HBB > Hexa > IEF > Harman > MK3 > JM-1 |
+| EDM / house / dubstep / DnB | Hexa > HBB > Harman > MK3 > IEF > JM-1 |
+| R&B / soul | IEF > HBB > JM-1 > Hexa > Harman > MK3 |
+| Rock / indie / alternative | HBB > Hexa > MK3 > IEF > Harman > JM-1 |
+| Metal | Hexa > HBB > MK3 > IEF > JM-1 > Harman |
+| Jazz | JM-1 > IEF > Hexa > MK3 > Harman > HBB |
+| Classical / orchestral / film scores | JM-1 > IEF > Hexa > MK3 > Harman > HBB |
+| Acoustic / folk / singer-songwriter | JM-1 > IEF > Hexa > Harman > MK3 > HBB |
+| Vocal / ballads / OST | IEF > JM-1 > Harman > Hexa > HBB > MK3 |
+| K-pop / J-pop / anime | IEF > HBB > Hexa > JM-1 > MK3 > Harman |
+| Country / blues / Americana | IEF > HBB > JM-1 > Hexa > Harman > MK3 |
+| Reggae / dub / reggaeton / Latin | HBB > Hexa > IEF > Harman > MK3 > JM-1 |
+| Lo-fi / chill / ambient | IEF > HBB > JM-1 > Hexa > MK3 > Harman |
+| Mixed playlist | HBB > IEF |
+
+These rankings are reasoned from what each EQ changes (see §5), not from a listening test.
+
 ---
 
 ## 0. Using the files in Wavelet
