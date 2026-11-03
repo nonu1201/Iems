@@ -1,0 +1,41 @@
+site,database_url,squiglink_category,rig_as_stated_by_site,file,channels,used_in_consensus,rms_dev_from_consensus_db_20-10k
+aden,https://aden.squig.link/,711-class IEM database,clone 711 coupler using AET07 tips (unless otherwise specified),KE Cadenza 2 LS,LR,yes,0.59
+Aftersound,https://aftersound.squig.link/,711-class IEM database,not stated (listed by squig.link as an IEM/711 database),KIWI EARS CADENZA 2,LR,yes,0.76
+ATechReviews,https://atechreviews.squig.link/,711-class IEM database,not stated (listed by squig.link as an IEM/711 database),Kiwi Ears Cadenza II,LR,yes,0.53
+ATechReviews,https://atechreviews.squig.link/,711-class IEM database,not stated (listed by squig.link as an IEM/711 database),Kiwi Ears Cadenza II (Shallow Fit),LR,no,0.89
+ATechReviews,https://atechreviews.squig.link/,711-class IEM database,not stated (listed by squig.link as an IEM/711 database),Kiwi Ears Cadenza II (Deep Fit),LR,no,1.10
+ATechReviews,https://atechreviews.squig.link/,711-class IEM database,not stated (listed by squig.link as an IEM/711 database),Kiwi Ears Cadenza II (Stock Narrow Bore Ear Tips),LR,no,0.53
+ATechReviews,https://atechreviews.squig.link/,711-class IEM database,not stated (listed by squig.link as an IEM/711 database),Kiwi Ears Cadenza II (Stock Wide Bore Ear Tips),LR,no,0.56
+Audio Amigo,https://audioamigo.squig.link/,711-class IEM database,"clone IEC 60318-4 (graph watermark: ""Generated with clone IEC60318-4"")",Kiwi Ears Cadenza II,LR,yes,0.64
+The Audio Store,https://theaudiostore.squig.link/,711-class IEM database,not stated (listed by squig.link as an IEM/711 database),Kiwi Ears Cadenza II,LR,yes,0.85
+AWSMDanny,https://awsmdanny.squig.link/,711-class IEM database,not stated (listed by squig.link as an IEM/711 database),Kiwi Ears Cadenza II,LR,yes,0.69
+Bass Audio,https://bassaudio.squig.link/,711-class IEM database,Clone IEC 60318-4 Coupler,Kiwi Ears Cadenza 2,LR,yes,0.29
+Bedrock Reviews,https://bedrock.squig.link/,711-class IEM database,not stated (listed by squig.link as an IEM/711 database),Kiwi Ears Cadenza II,LR,yes,0.98
+boizoff,https://boizoff.squig.link/,711-class IEM database,IEC 60318-4 clone (graph watermark),Cadenza II (wide stock silicone tips) ✓,LR,yes,0.34
+boizoff,https://boizoff.squig.link/,711-class IEM database,IEC 60318-4 clone (graph watermark),Cadenza II (narrow stock silicone tips),LR,no,0.37
+boizoff,https://boizoff.squig.link/,711-class IEM database,IEC 60318-4 clone (graph watermark),Cadenza II (TENNMAK SoFoam tips),LR,no,0.44
+boizoff,https://boizoff.squig.link/,711-class IEM database,IEC 60318-4 clone (graph watermark),Cadenza II (reviewer fit),LR,no,1.13
+Dung Le,https://dl.squig.link/,711-class IEM database,not stated (listed by squig.link as an IEM/711 database),Cadenza 2,LR,yes,0.44
+Dung Le,https://dl.squig.link/,711-class IEM database,not stated (listed by squig.link as an IEM/711 database),Cadenza 2 wide,LR,no,0.52
+dvewlsh,https://dvewlsh.squig.link/,711-class IEM database,clone IEC 711,Kiwi Ears Cadenza 2,LR,yes,1.04
+dvewlsh,https://dvewlsh.squig.link/,711-class IEM database,clone IEC 711,Kiwi Ears Cad 2 Wide,LR,no,0.64
+dvewlsh,https://dvewlsh.squig.link/,711-class IEM database,clone IEC 711,Kiwi Ears Cad 2 SN,LR,no,0.60
+Earphones Archive (IEMs),https://earphonesarchive.squig.link/,B&K 5128 database,B&K 5128 (listed by squig.link as a 5128 database),Kiwi Ears Cadenza II (short tip),LR,no,n/a (different rig)
+Earphones Archive (IEMs),https://earphonesarchive.squig.link/,B&K 5128 database,B&K 5128 (listed by squig.link as a 5128 database),Kiwi Ears Cadenza II (long tip),LR,no,n/a (different rig)
+Fernanda Gunsan,https://squig.link/lab/fernandagunsan/,711-class IEM database,IEC 711,Kiwi Ears Cadenza 2,LR,yes,0.78
+Fernanda Gunsan,https://squig.link/lab/fernandagunsan/,711-class IEM database,IEC 711,Kiwi Ears Cadenza 2 Wide Bore,LR,no,0.67
+Hawaii Bad Boy,https://hbb.squig.link/,711-class IEM database,not stated (listed by squig.link as an IEM/711 database),Ki Cad 2,R,yes,0.70
+Headphone Zone,https://headphonezone.squig.link/,711-class IEM database,IEC60318-4 Occluded-ear simulator,Kiwi Cadenza II,LR,yes,0.91
+Hobby Talk,https://hobbytalk.squig.link/,711-class IEM database,not stated (listed by squig.link as an IEM/711 database),Kiwi Ears Cadenza 2,LR,yes,1.95
+Jaytiss,https://jaytiss.squig.link/,711-class IEM database,not stated (listed by squig.link as an IEM/711 database),KiwiCadenza2,LR,yes,0.29
+Joyce's Review,https://squig.link/lab/joycesreview/,711-class IEM database,"(template placeholder text, not a rig)",Kiwi Ears Cadenza II,LR,yes,1.01
+Kuping Sensi,https://kuping-sensi.squig.link/,711-class IEM database,clone IEC 711 + KB006x ear,Kiwi Ears Cadenza 2,LR,yes,0.81
+Lumerion,https://lumerion.squig.link/,711-class IEM database,clone IEC 711,Kiwi Ears Cadenza II,LR,yes,0.34
+MusiCafé,https://musicafe.squig.link/,711-class IEM database,not stated (listed by squig.link as an IEM/711 database),Kiwiears Cadenza 2,LR,yes,0.23
+Practiphile,https://practiphile.squig.link/,711-class IEM database,not stated (listed by squig.link as an IEM/711 database),Kiwi Ears Cadenza 2,LR,yes,0.50
+Paul Wasabi,https://pw.squig.link/,711-class IEM database,not stated (listed by squig.link as an IEM/711 database),Kiwi Ears Cadenza II,LR,yes,0.39
+Precogvision,https://precog.squig.link/,711-class IEM database,not stated (listed by squig.link as an IEM/711 database),Kiwiears Cadenza II,LR,yes,0.75
+Soundcheck39,https://soundcheck39.squig.link/,711-class IEM database,not stated (listed by squig.link as an IEM/711 database),Kiwi Ears Cadenza II,LR,yes,0.72
+Soundignity,https://soundignity.squig.link/,711-class IEM database,clone IEC 711,Kiwi Ears Cadenza II,LR,yes,1.12
+takeitslow7,https://takeitslow7.squig.link/,711-class IEM database,IEC 60318-4 ear simulator (site description),kiwiears cadenza ii narrow,L,yes,1.07
+TDL,https://squig.link/lab/tdl/,711-class IEM database,clone IEC 711 + KB006x ear,Kiwi Ears Cadenza 2,LR,yes,0.65
